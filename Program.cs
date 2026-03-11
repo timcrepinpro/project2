@@ -39,6 +39,13 @@ class Compte
         this.solde -= montant;
         Console.WriteLine("retrait de " + montant + " effectué, solde actuel: " + this.solde);
     }
+        // effectue un dépôt du montant spécifié et affiche le solde actuel après le dépôt
+    public void depot(int montant)
+    {
+        this.solde += montant;
+        Console.WriteLine("depot: " + montant + " \nsolde: " + this.solde);
+    }
+
     // effectue un transfert du montant spécifié vers le compte destinataire si le solde est suffisant, sinon affiche un message d'erreur
     // affiche le solde actuel après le transfert
     public void transfert(Compte destinataire, double montant)
@@ -108,6 +115,7 @@ class Program
         compte1.afficherendettement();
         compte1.rembourser(200);
         compte1.afficherendettement();
+        compte3.depot(99999999);
 
 
     }
