@@ -1,4 +1,4 @@
-class Comptepayant 
+class Comptepayant : Compte
 {
     private double commission;
     private int nombreoperations;
