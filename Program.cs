@@ -9,6 +9,8 @@ class Program
 {
     static void Main(string[] args)
     {
+
+        // test precedent
         
         Compte compte1 = new Compte("Alice", 2000);
         Compte compte2 = new Compte("Bob", 1000);
@@ -26,7 +28,7 @@ class Program
 
 
 
-        
+        // test du tp        
 
         Compte compte3 = new Compte("farid", 1500);
         compte3.depot(200);
