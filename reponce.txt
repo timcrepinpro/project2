@@ -1,0 +1,29 @@
+partie 3 
+    q1
+    les information nom, numero, solde, nombreComptes sont en commun
+
+    q2
+    les methode dinitialisation insi que de modification sont dupliquer
+
+    q3
+    si les valeur sont commune mes valeur des class mere et fille sont modifier
+
+    q4
+    il est compliquer a maintenir car il faut modifier toute les valeur une par une si il ny a pas dherediter
+
+
+
+partie 6
+    q1 
+    le principal objectif est deviter la duplication et davoir une meilleur faciliter a la manipulation des information
+
+    q2
+    il permet deviter les duplication de donnée
+
+    q3
+    il ya moin de fonction a modifier a chaque changement
+
+    q4 la base de compte dois contenir les information comune a tout les compte
+
+    q5
+    les classes specialiser doive contenir les information quelle sont les seul ou minorirtaire a traiter

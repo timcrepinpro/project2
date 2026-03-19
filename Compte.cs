@@ -3,8 +3,13 @@ class Compte
     protected int numero;
     protected string nom;
     protected double solde;
-    protected float endettement;
+    
     protected static int nombreComptes = 0;
+
+    public string GetNom()
+    {
+        return this.nom;
+    }
 
     public Compte()
     {
@@ -15,7 +20,7 @@ class Compte
         this.numero = nombreComptes;
         this.nom = nom;
         this.solde = solde;
-        this.endettement = 0;
+        
         nombreComptes++;
     }
 
@@ -57,40 +62,6 @@ class Compte
         destinataire.solde += montant;
         Console.WriteLine($"votre capital actuel est de {this.solde}");
         Console.WriteLine("transfert de " + montant + " effectué vers le compte de " + destinataire.nom);
-    }
-   
-    // effectue un emprunt du montant spécifié si le montant total de l'endettement après l'emprunt ne dépasse pas 33% du solde, sinon affiche un message d'erreur
-    public void endetter(float montant)
-    {
-        if(montant+this.endettement < this.solde*0.33-this.endettement)
-        {
-            this.endettement += (float)Math.Round(montant * 1.03);
-            this.solde += montant;
-            Console.WriteLine($" taux pret : 1.03 \nempreint : {montant} \n endettement : {this.endettement} \n capital actuel : {this.solde}");
-        }
-    }
-    // effectue un remboursement du montant spécifié si le montant est inférieur à l'endettement, sinon affiche un message d'erreur
-    public void rembourser(float montant)
-    {
-        if(montant > this.endettement)
-        {
-            Console.WriteLine("le montant à rembourser est supérieur à l'endettement actuel");
-            return;
-        }
-        if(montant > this.solde)
-        {
-            Console.WriteLine("le montant à rembourser est supérieur au solde actuel");
-            return;
-        }
-        this.endettement -= montant;
-        this.solde -= montant;
-        Console.WriteLine($"remboursement de {montant} effectué \nendettement actuel: {this.endettement} \nsolde actuel: {this.solde}");
-    }
-
-    // affiche le montant total de l'endettement du compte
-    public void afficherendettement()
-    {
-        Console.WriteLine("personne : " + this.nom + "\nendetement: " + this.endettement);
     }
 
 }
